@@ -1,0 +1,5 @@
+name: nfs-server
+version: 0.0.1
+description: The NFS server.
+details:
+  This package deploys NFS server to kubernetes.

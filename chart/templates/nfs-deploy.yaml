@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nfs-server
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nfs
+    spec:
+      containers:
+      - name: nfs-server
+        image: monstar/nfs-server
+        securityContext:
+          capabilities:
+            add:
+            - SYS_ADMIN
+        ports:
+        - containerPort: 111
+          name: rpcbind
+        - containerPort: 2049
+          name: nfs
