@@ -1,13 +1,14 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nfs-server
+  name: nfs-server-deployment
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: nfs
+        app: nfs-server
+        component: nfs-server
     spec:
       containers:
       - name: nfs-server
