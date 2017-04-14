@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nfs-client
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nfs-client
+        component: nfs-client
+    spec:
+      containers:
+      - name: nfs-client
+        image: monstar/nfs-server
+        securityContext:
+          capabilities:
+            add:
+            - SYS_ADMIN
