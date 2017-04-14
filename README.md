@@ -1,7 +1,7 @@
 NFS Server chart
 ================
 
-Original containerized solution here: [Dockerized NFS Server](https://github.com/ErezHorev/dockerized_nfs_server)
+Original containerized solution here: [Dockerized NFS Server](11)
 
 ## Docker registry
 

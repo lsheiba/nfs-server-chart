@@ -9,7 +9,7 @@ RUN mkdir -p /exports
 
 VOLUME /exports
 
-EXPOSE 111/udp 2049/tcp
+EXPOSE 111/udp 2049/tcp 20048/tcp
 
 ADD run.sh /usr/local/bin/run.sh
 ENTRYPOINT ["run.sh"]
